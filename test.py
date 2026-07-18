@@ -1,7 +1,4 @@
-# import fastapi
-# api_key="AIzaSyC1cZ7v0ckx9LEv0b7WmNwpQJlqkpfqr1c"
-# model=""
-# print(api_key)
+
 y=300
 x=int(input("Enter you password for transaction: ") )                                 #say this is my pasword
 def authenticator(upcoming_func):     #decorator
