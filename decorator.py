@@ -1,4 +1,3 @@
-
 y=300
 x=int(input("Enter you password for transaction: ") )                                 #say this is my pasword
 def authenticator(upcoming_func):     #decorator
