@@ -1,4 +1,7 @@
-
+# Overview  
+This project uses bash and gnome-terminal please check your terminal before running it and make necessary changes accordingly
+## Workflow  
+This diagram below demonstrates the general workflow of project(work in progress).
 ```mermaid
 graph LR
     %% Styling
@@ -38,7 +41,8 @@ graph LR
     H -->|Inject Live Human Evaluation String| D2
     H -->|Flick Loop Reset String| D3
 ```
-
+# DFD(Level 1)  
+This diagram below lines out general data flow happening(work in progress).
 ```mermaid
 graph TD
     %% Styling
