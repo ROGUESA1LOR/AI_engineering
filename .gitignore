@@ -1,3 +1,6 @@
 .venv
 .env
-
+/duo-agent-debate/pipe1
+/duo-agent-debate/pipe2
+/duo-agent-debate/pipe3
+/duo-agent-debate/state.json
