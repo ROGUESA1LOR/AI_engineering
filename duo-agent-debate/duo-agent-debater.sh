@@ -1,6 +1,6 @@
 #! /bin/bash
-rm pipe1 pipe2 pipe3         #these are for terminal aesthetics
-mkfifo pipe1 pipe2 pipe3
+#rm pipe1 pipe2 pipe3         #these are for terminal aesthetics
+#mkfifo pipe1 pipe2 pipe3
 TOPIC=""
 MODEL1_NAME=""
 MODEL2_NAME=""
@@ -13,4 +13,5 @@ jq -n --arg topic "$TOPIC" \
 chmod +x MODEL1.sh
 chmod +x MODEL2.sh
 ./MODEL1.sh
+sleep 1
 ./MODEL2.sh
