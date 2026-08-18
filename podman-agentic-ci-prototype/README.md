@@ -37,4 +37,5 @@ python3 agent.py
 ```
 ## Outcome
 
-![Result](Screenshot from 2026-08-18 21-05-21.png)
+![Result](<Screenshot from 2026-08-18 21-05-21.png>)
+
