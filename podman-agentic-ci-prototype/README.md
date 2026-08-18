@@ -36,4 +36,4 @@ Execute the core pipeline transaction loop:
 python3 agent.py
 ```
 ## Outcome
-![alt text](Screenshot from 2026-08-18 21-05-21.png)
+![ Result ](Screenshot from 2026-08-18 21-05-21.png)
