@@ -8,6 +8,15 @@
         "error": "bad syntax",
         "raw": "{\n  \"is_flake\": false,\n  \"category\": \"configuration\",\n  \"reason\": \"Node 20 is being deprecated and this workflow is running with \u001b[K\nNode 24 by default\"\n}"
       }
+    },
+    {
+      "run_id": 32157697371,
+      "status": null,
+      "log": "Real cloud traceback extracted successfully",
+      "verdict": {
+        "error": "bad syntax",
+        "raw": "{\n  \"is_flake\": false,\n  \"category\": \"configuration\",\n  \"reason\": \"ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment varia\u001b[5D\u001b[K\nvariable is not set\"\n}"
+      }
     }
   ]
 }
