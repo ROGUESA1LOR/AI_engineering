@@ -1,0 +1,13 @@
+{
+  "history": [
+    {
+      "run_id": 32151108578,
+      "status": "failure",
+      "log": "Real cloud traceback extracted successfully",
+      "verdict": {
+        "error": "bad syntax",
+        "raw": "{\n  \"is_flake\": false,\n  \"category\": \"configuration\",\n  \"reason\": \"Node 20 is being deprecated and this workflow is running with \u001b[K\nNode 24 by default\"\n}"
+      }
+    }
+  ]
+}

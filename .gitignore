@@ -4,3 +4,7 @@
 /duo-agent-debate/pipe2
 /duo-agent-debate/pipe3
 /duo-agent-debate/state.json
+/podman-agentic-ci-prototype/.venv
+/podman-agentic-ci-prototype/.env
+/podman-agentic-ci-prototype/extracted_logs
+
