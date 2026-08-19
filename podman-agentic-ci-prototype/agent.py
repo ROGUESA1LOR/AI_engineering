@@ -38,7 +38,7 @@ subprocess.run(
 )
 subprocess.run(["unzip", "-o", "logs.zip", "-d", "extracted_logs"], capture_output=True)
 
-# Brute force text extraction
+# Bruting text extraction
 err_text = ""
 if os.path.exists("extracted_logs"):
     for f_name in os.listdir("extracted_logs"):
