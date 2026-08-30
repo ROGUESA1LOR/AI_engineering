@@ -17,7 +17,7 @@ proc = subprocess.run(
     ["curl", "-s", "-H", f"Authorization: Bearer {token}", "-H", "User-Agent: python", url], 
     capture_output=True, text=True, check=True
 )
-print(proc)
+
 try:
     data = json.loads(proc.stdout)
 except json.JSONDecodeError:

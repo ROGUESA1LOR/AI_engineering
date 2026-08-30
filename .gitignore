@@ -1,4 +1,4 @@
-.venv
+/Fastapi/.venv
 .env
 /duo-agent-debate/pipe1
 /duo-agent-debate/pipe2

@@ -17,6 +17,15 @@
         "error": "bad syntax",
         "raw": "{\n  \"is_flake\": false,\n  \"category\": \"configuration\",\n  \"reason\": \"ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment varia\u001b[5D\u001b[K\nvariable is not set\"\n}"
       }
+    },
+    {
+      "run_id": 32247048870,
+      "status": "failure",
+      "log": "Real cloud traceback extracted successfully",
+      "verdict": {
+        "error": "bad syntax",
+        "raw": "{\n  \"is_flake\": false,\n  \"category\": \"Action/Runner\",\n  \"reason\": \"ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment varia\u001b[5D\u001b[K\nvariable is not set\"\n}"
+      }
     }
   ]
 }
