@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Semantic Vector Search UI</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 700px; margin: 40px auto; padding: 20px; background-color: #f8f9fa; }
+        .container { background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        input[type="text"] { width: 75%; padding: 12px; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px; }
+        button { width: 20%; padding: 12px; background-color: #4f46e5; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: background 0.2s; }
+        button:hover { background-color: #4338ca; }
+        .meta-box { margin-top: 25px; padding: 20px; background: #f1f5f9; border-left: 5px solid #4f46e5; border-radius: 4px; }
+        #aiResponse { white-space: pre-wrap; line-height: 1.6; color: #334155; }
+        .status-tag { font-size: 12px; color: #64748b; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; block-size: auto; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>AI Semantic Search Engine</h2>
+        <p style="color: #64748b; margin-bottom: 20px;">Queries are converted to numerical coordinates to isolate data records across vector grids.</p>
+        
+        <!-- Interactive Interface Elements -->
+        <input type="text" id="userInput" placeholder="Ask about secure keys or server sync logs..." required>
+        <button onclick="executeVectorQuery()">Search</button>
+
+        <!-- Response Container Output Block -->
+        <div class="meta-box">
+            <div class="status-tag" id="engineStatus">System Ready</div>
+            <p id="aiResponse">The vector coordinate response output will print down inside this container element...</p>
+        </div>
+    </div>
+
+    <!-- The Ninja Frontend Communication Controller Layer -->
+    <script>
+    async function executeVectorQuery() {
+        const inputField = document.getElementById("userInput");
+        const responseParagraph = document.getElementById("aiResponse");
+        const statusLabel = document.getElementById("engineStatus");
+
+        // 1. Input string extraction
+        const userPromptText = inputField.value.trim();
+        if (!userPromptText) return;
+
+        // 2. Visual state UI updates
+        statusLabel.innerText = "Querying Vector Grid...";
+        responseParagraph.innerText = "Extracting matching vector nodes and streaming inference pipelines...";
+
+        try {
+            // 3. Clean String Concatenation URL Routing Pattern matching your FastAPI backend
+            const targetUrl = "http://127.0.0.1:8000/chat";
+            
+            // 4. Fire the async background network call
+            const networkResponse = await fetch(targetUrl, { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ prompt: userPromptText })
+            });
+
+            // Catch faulty HTTP connection states safely
+            if (!networkResponse.ok) {
+                throw new Error("Server engine returned an error code: " + networkResponse.status);
+            }
+
+            // 5. Parse returned data structures directly in memory 
+            const dataPayload = await networkResponse.json();
+
+            // 6. Manipulate the DOM directly to present text updates without page reloads
+            statusLabel.innerText = "Response Retreived";
+            responseParagraph.innerText = dataPayload.message;
+
+        } catch (error) {
+            statusLabel.innerText = "Execution Failure";
+            responseParagraph.innerText = "Network Error: " + error.message;
+            console.error("Vector pipeline connection error details:", error);
+        }
+    }
+    </script>
+
+</body>
+</html>
